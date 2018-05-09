@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pojo">
+    <!--多对一-->
+    <!--<resultMap id="productBean" type="Product">-->
+        <!--<id column="pid" property="id" />-->
+        <!--<result column="pname" property="name" />-->
+        <!--<result column="price" property="price" />-->
+
+        <!--<association property="category" javaType="Category">-->
+            <!--<id column="cid" property="id" />-->
+            <!--<result column="cname" property="name" />-->
+        <!--</association>-->
+    <!--</resultMap>-->
+
+    <resultMap id="productCategoryBean" type="Product">
+        <id column="pid" property="id" />
+        <result column="pname" property="name" />
+        <result property="price" column="price" />
+        
+        <collection property="categories" ofType="Category">
+            <id property="id" column="cid" />
+            <result property="name" column="cname" />
+        </collection>
+    </resultMap>
+
+    <select id="listProductCategoryBean" resultMap="productCategoryBean">
+        SELECT p.*, c.*, pc.*, p.id 'pid', p.name 'pname', c.id 'cid', c.name 'cname'
+        FROM product p
+        LEFT JOIN product_category pc ON p.id= pc.pid
+        LEFT JOIN category_ c ON pc.cid = c.id
+    </select>
+
+    <!--<select id="listProductBean" resultMap="productBean">-->
+        <!--select c.*, p.*, c.id 'cid', p.id 'pid', c.name 'cname', p.name 'pname' from category_ c left join product p on c.id = p.cid-->
+    <!--</select>-->
+
+    <select id="listProduct" resultType="Product">
+        select * from product
+    </select>
+</mapper>

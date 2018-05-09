@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pojo">
+    <cache />
+    <resultMap id="categoryBean" type="Category">
+        <id column="cid" property="id" />
+        <result column="cname" property="name" />
+
+        <collection property="products" ofType="Product">
+            <id column="pid" property="id" />
+            <result column="pname" property="name" />
+            <result column="price" property="price" />
+        </collection>
+    </resultMap>
+
+    <select id="listCategoryBean" resultMap="categoryBean">
+        SELECT c.id 'cid', p.id 'pid', c.name 'cname', p.name 'pname', p.price
+        FROM category_ c
+        LEFT JOIN product p
+        ON c.id=p.cid
+    </select>
+    
+    <!--<select id="listCategoryBean" resultMap="categoryBean">-->
+        <!--SELECT c.*, p.*, c.id 'cid', p.id 'pid', c.name 'cname', p.name 'pname'-->
+        <!--FROM category_ c-->
+        <!--LEFT JOIN product p-->
+        <!--ON c.id=p.cid-->
+    <!--</select>-->
+    
+    <select id="listCategory" resultType="Category">
+        select * from category_
+    </select>
+
+    <insert id="addCategory" parameterType="Category">
+        INSERT INTO category_ (name) VALUES (#{name})
+    </insert>
+
+    <delete id="deleteCategory" parameterType="Category">
+        DELETE FROM category_ WHERE id = #{id}
+    </delete>
+
+    <select id="getCategory" parameterType="int" resultType="Category">
+        SELECT * FROM category_ WHERE id = #{id}
+    </select>
+
+    <update id="updateCategory" parameterType="Category">
+        UPDATE category_ SET name = #{name} where id = #{id}
+    </update>
+</mapper>
