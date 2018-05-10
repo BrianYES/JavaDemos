@@ -10,6 +10,7 @@ import javax.jms.MessageProducer;
 import javax.jms.Queue;
 import javax.jms.Session;
 import javax.jms.TextMessage;
+import javax.jms.Topic;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.junit.Test;
@@ -48,6 +49,52 @@ public class ActiveMQTest {
         Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
         Queue queue = session.createQueue("test-queue");
         MessageConsumer consumer = session.createConsumer(queue);
+        consumer.setMessageListener(new MessageListener() {
+            public void onMessage(Message message) {
+                if (message instanceof TextMessage) {
+                    TextMessage textMessage = (TextMessage) message;
+                    try {
+                        String text = textMessage.getText();
+                        System.out.println(text);
+                    } catch (JMSException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+        // 系统等到接受消息
+        System.in.read();
+
+        // 关闭资源
+        consumer.close();
+        session.close();
+        connection.close();
+    }
+
+    @Test
+    public void testTopicProducer() throws JMSException {
+        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://127.0.0.1:61616");
+        Connection connection = connectionFactory.createConnection();
+        connection.start();
+        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+        Topic topic = session.createTopic("test-topic");
+        MessageProducer producer = session.createProducer(topic);
+        TextMessage textMessage = session.createTextMessage("hello activemq");
+        producer.send(textMessage);
+        producer.close();
+        session.close();
+        connection.close();
+    }
+
+    @Test
+    public void testTopicConsumer() throws Exception {
+        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://127.0.0.1:61616");
+        Connection connection = connectionFactory.createConnection();
+        connection.start();
+        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+        Topic topic = session.createTopic("test-topic");
+        MessageConsumer consumer = session.createConsumer(topic);
         consumer.setMessageListener(new MessageListener() {
             public void onMessage(Message message) {
                 if (message instanceof TextMessage) {

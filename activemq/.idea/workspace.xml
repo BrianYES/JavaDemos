@@ -26,12 +26,14 @@
       <file leaf-file-name="ActiveMQTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/brian/test/ActiveMQTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="44" column="93" lean-forward="false" selection-start-line="44" selection-start-column="93" selection-end-line="44" selection-end-column="93" />
+            <state relative-caret-position="1530">
+              <caret line="90" column="19" lean-forward="false" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1960#2452#0" expanded="true" />
-                <element signature="e#2451#2452#0" expanded="true" />
+                <element signature="e#1984#2476#0" expanded="true" />
+                <element signature="e#2475#2476#0" expanded="true" />
+                <element signature="e#3815#4307#0" expanded="true" />
+                <element signature="e#4306#4307#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -159,6 +161,14 @@
             </path>
             <path>
               <item name="activemq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="activemq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="activemq" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -199,7 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ActiveMQTest.testQueueProducer">
+  <component name="RunManager" selected="JUnit.ActiveMQTest.testTopicProducer">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -259,6 +269,56 @@
       <option name="PACKAGE_NAME" value="com.brian.test" />
       <option name="MAIN_CLASS_NAME" value="com.brian.test.ActiveMQTest" />
       <option name="METHOD_NAME" value="testQueueProducer" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ActiveMQTest.testTopicConsumer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.brian.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="activemq" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.brian.test" />
+      <option name="MAIN_CLASS_NAME" value="com.brian.test.ActiveMQTest" />
+      <option name="METHOD_NAME" value="testTopicConsumer" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ActiveMQTest.testTopicProducer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.brian.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="activemq" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.brian.test" />
+      <option name="MAIN_CLASS_NAME" value="com.brian.test.ActiveMQTest" />
+      <option name="METHOD_NAME" value="testTopicProducer" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -331,14 +391,18 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="2">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="JUnit.ActiveMQTest.testQueueProducer" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.ActiveMQTest.testQueueConsumer" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ActiveMQTest.testTopicProducer" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ActiveMQTest.testTopicConsumer" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ActiveMQTest.testQueueProducer" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ActiveMQTest.testQueueConsumer" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ActiveMQTest.testTopicProducer" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ActiveMQTest.testTopicConsumer" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ActiveMQTest.testQueueProducer" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ActiveMQTest.testQueueConsumer" />
       </list>
     </recent_temporary>
   </component>
@@ -355,7 +419,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525937661889</updated>
-      <workItem from="1525937665992" duration="1977000" />
+      <workItem from="1525937665992" duration="2545000" />
     </task>
     <servers />
   </component>
@@ -369,9 +433,6 @@
     <history-entry file="ActiveMQTest_testQueueConsumer - 2018.05.10 at 16h 07m 25s.xml">
       <configuration name="ActiveMQTest.testQueueConsumer" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ActiveMQTest_testQueueProducer - 2018.05.10 at 16h 03m 11s.xml">
-      <configuration name="ActiveMQTest.testQueueProducer" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ActiveMQTest_testQueueProducer - 2018.05.10 at 16h 03m 34s.xml">
       <configuration name="ActiveMQTest.testQueueProducer" configurationId="JUnit" />
     </history-entry>
@@ -381,9 +442,21 @@
     <history-entry file="ActiveMQTest_testQueueProducer - 2018.05.10 at 16h 07m 00s.xml">
       <configuration name="ActiveMQTest.testQueueProducer" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ActiveMQTest_testTopicConsumer - 2018.05.10 at 16h 16m 36s.xml">
+      <configuration name="ActiveMQTest.testTopicConsumer" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ActiveMQTest_testTopicConsumer - 2018.05.10 at 16h 16m 40s.xml">
+      <configuration name="ActiveMQTest.testTopicConsumer" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ActiveMQTest_testTopicProducer - 2018.05.10 at 16h 14m 41s.xml">
+      <configuration name="ActiveMQTest.testTopicProducer" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ActiveMQTest_testTopicProducer - 2018.05.10 at 16h 16m 17s.xml">
+      <configuration name="ActiveMQTest.testTopicProducer" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1977000" />
+    <option name="totallyTimeSpent" value="2545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2404" y="-373" width="2094" height="1164" extended-state="0" />
@@ -444,12 +517,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/brian/test/ActiveMQTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="44" column="93" lean-forward="false" selection-start-line="44" selection-start-column="93" selection-end-line="44" selection-end-column="93" />
+        <state relative-caret-position="1530">
+          <caret line="90" column="19" lean-forward="false" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1960#2452#0" expanded="true" />
-            <element signature="e#2451#2452#0" expanded="true" />
+            <element signature="e#1984#2476#0" expanded="true" />
+            <element signature="e#2475#2476#0" expanded="true" />
+            <element signature="e#3815#4307#0" expanded="true" />
+            <element signature="e#4306#4307#0" expanded="true" />
           </folding>
         </state>
       </provider>
