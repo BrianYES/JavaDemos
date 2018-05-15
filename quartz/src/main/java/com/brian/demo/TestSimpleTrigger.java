@@ -12,7 +12,7 @@ import org.quartz.Trigger;
 import org.quartz.TriggerBuilder;
 import org.quartz.impl.StdSchedulerFactory;
 
-public class SimpleTriggerTest {
+public class TestSimpleTrigger {
 
     public static void main(String[] args) throws Exception {
         test1();
