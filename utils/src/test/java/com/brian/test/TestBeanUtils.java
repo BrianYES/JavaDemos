@@ -12,10 +12,15 @@ public class TestBeanUtils {
     public void test() {
         BeanA a = new BeanA();
         a.setId(1);
+        a.setC_id(new Long(2));
         a.setName("Brian");
-        a.setAddress("hangzhou");
 
         BeanB beanB = BeanUtils.beanCopy(a, BeanB.class);
         System.out.println(beanB);
+
+        Long v = new Long(12);
+        String s = v.toString();
+        System.out.println(s);
+        System.out.println(Integer.parseInt(s));
     }
 }

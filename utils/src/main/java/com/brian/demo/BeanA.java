@@ -1,19 +1,13 @@
 package com.brian.demo;
 
+import java.util.Date;
+import java.util.List;
+
 public class BeanA {
 
     private int id;
+    private Long c_id;
     private String name;
-
-    private String address;
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
     public int getId() {
         return id;
@@ -21,6 +15,14 @@ public class BeanA {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Long getC_id() {
+        return c_id;
+    }
+
+    public void setC_id(Long c_id) {
+        this.c_id = c_id;
     }
 
     public String getName() {
@@ -35,6 +37,7 @@ public class BeanA {
     public String toString() {
         return "BeanA{" +
                 "id=" + id +
+                ", c_id=" + c_id +
                 ", name='" + name + '\'' +
                 '}';
     }
