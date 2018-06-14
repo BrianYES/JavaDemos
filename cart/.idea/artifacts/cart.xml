@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="exploded-war" name="cart">
-    <output-path>$PROJECT_DIR$/web/WEB-INF/classes</output-path>
-    <root id="root" />
-  </artifact>
-</component>
