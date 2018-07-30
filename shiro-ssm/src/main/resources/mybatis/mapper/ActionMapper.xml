@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="shiro.dao.ActionDAO">
+
+    <select id="listActionsByUserName" parameterType="string" resultType="Action">
+        SELECT a.actionId, a.actionName
+        FROM backUser u
+        LEFT JOIN backUserRole ur ON ur.userName = u.userName
+        LEFT JOIN role r ON r.roleId = ur.roleId
+        LEFT JOIN roleAction ra ON ra.roleId = r.roleId
+        LEFT JOIN action a ON a.actionId = ra.actionId
+        WHERE u.userName = #{0}
+    </select>
+</mapper>
