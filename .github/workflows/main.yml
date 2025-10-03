@@ -11,3 +11,4 @@ jobs:
         run: |
           echo "sha_short=$(git rev-parse --short HEAD)"
           echo '${{ toJSON(github) }}'
+
