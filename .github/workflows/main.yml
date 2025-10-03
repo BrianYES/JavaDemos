@@ -2,13 +2,15 @@ name: Explore GitHub Context
 
 on: workflow_dispatch
 
+env:
+  SERVICE: backend
+
 jobs:
   explore:
     runs-on: ubuntu-latest
     steps:
-
       - name: Dump GitHub context
         run: |
-          echo "sha_short=$(git rev-parse --short HEAD)"
+          echo "${{ env.SERVICE }}"
           echo '${{ toJSON(github) }}'
 
